@@ -3,7 +3,7 @@
 //  TwitterClone
 //
 //  Created by SARTHAK JAIN on 7/22/22.
-//
+// Added the functionality to have an explore page to explore other accounts
 
 import SwiftUI
 
