@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		280A968C289B0C900091072B /* TweetFilterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280A968B289B0C900091072B /* TweetFilterViewModel.swift */; };
 		28335AB9288A795C004EB88D /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28335AB8288A795C004EB88D /* FeedView.swift */; };
 		28335ABC288A7AC5004EB88D /* TweetsRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28335ABB288A7AC5004EB88D /* TweetsRowView.swift */; };
 		28335ABF288A8038004EB88D /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28335ABE288A8038004EB88D /* MainTabView.swift */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		280A968B289B0C900091072B /* TweetFilterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetFilterViewModel.swift; sourceTree = "<group>"; };
 		28335AB8288A795C004EB88D /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		28335ABB288A7AC5004EB88D /* TweetsRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TweetsRowView.swift; sourceTree = "<group>"; };
 		28335ABE288A8038004EB88D /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 		28335ACA288A8308004EB88D /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				280A968B289B0C900091072B /* TweetFilterViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				28335AB9288A795C004EB88D /* FeedView.swift in Sources */,
 				28817603288A76F30044C4FD /* TwitterCloneApp.swift in Sources */,
 				28335AC5288A81F0004EB88D /* ExploreView.swift in Sources */,
+				280A968C289B0C900091072B /* TweetFilterViewModel.swift in Sources */,
 				28335ABF288A8038004EB88D /* MainTabView.swift in Sources */,
 				28335AC7288A8207004EB88D /* NotificationsView.swift in Sources */,
 			);
