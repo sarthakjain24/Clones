@@ -1,6 +1,7 @@
 import { Text, View } from 'react-native'
 import React from 'react'
-import { FlatList, TouchableOpacity } from 'react-native-web';
+import { FlatList, Image, TouchableOpacity } from 'react-native-web';
+import tw from 'tailwind-react-native-classnames';
 
 const data = [
     {
@@ -19,17 +20,28 @@ const data = [
 
 
 const NavOptions = () => {
-  return (
-    <FlatList
-        data={data}
-        horizontal 
-        renderItem = {({item}) => (
-            <TouchableOpacity>
-                <Text>{item.title}</Text>
-            </TouchableOpacity>
-        )}
-    />
-  );
+    return (
+        <FlatList
+            data={data}
+            //Use a key to only render the new key added
+            keyExtractor={(item) => item.id}
+            horizontal
+            renderItem={({ item }) => (
+                <TouchableOpacity
+                    style={tw`p-2 pl-6 pb-8 pt-4 bg-gray-200 m-2 w-40`}
+                >
+                    
+                    <View>
+                        <Image
+                            style={{ width: 120, height: 120, resizeMode: "contain" }}
+                            source={{ uri: item.image }}
+                        />
+                        <Text style={tw`mt-2 text-lg font-semibold`}>{item.title}</Text>
+                    </View>
+                </TouchableOpacity>
+            )}
+        />
+    );
 };
 
 export default NavOptions
