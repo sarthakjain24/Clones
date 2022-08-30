@@ -6,17 +6,23 @@ import { useSelector } from 'react-redux'
 import MapViewDirections from 'react-native-maps-directions'
 import { selectDestination, selectOrigin } from '../slices/navSlice'
 import { GOOGLE_MAPS_APIKEY } from "@env";
+
+
+
 const Map = () => {
   const origin = useSelector(selectOrigin)
   const destination = useSelector(selectDestination)
   const mapRef = useRef(null);
   useEffect(() => {
     if (!origin || !destination) return;
+    
     //Zoom and fit to markers
     mapRef.current.fitToSuppliedMarkers(['origin', 'destination'], {
       edgePadding: { top: 50, right: 50, bottom: 50, left: 50 },
-    })
+    });
   }, [origin, destination])
+
+
   return (
     <MapView style={tw`flex-1`}
       ref={mapRef}
@@ -29,6 +35,8 @@ const Map = () => {
         }
       }
     >
+
+
       {origin && destination && (
         <MapViewDirections
           origin={origin.description}
@@ -38,6 +46,9 @@ const Map = () => {
           strokeColor="black"
         />
       )}
+
+
+
       {origin?.location && (
         <Marker
           coordinate={{
