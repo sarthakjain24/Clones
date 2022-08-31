@@ -5,6 +5,8 @@ import { Icon } from 'react-native-elements';
 import { useNavigation } from "@react-navigation/native";
 import { useSelector } from 'react-redux';
 import { selectTravelTimeInformation } from '../slices/navSlice';
+import 'intl';
+
 
 const data = [
   {
@@ -70,11 +72,21 @@ const travelTimeInformation = useSelector(selectTravelTimeInformation);
             </View>
             <Text style={tw`text-xl`}>
             
-              {new Intl.NumberFormat("en-gb", {
+              {/* {new Intl.NumberFormat("en-gb", {
                 style: 'currency',
                 currency: 'GBP',
               }).format(
                 (travelTimeInformation?.duration.value * SURGE_CHARGE_RATE * multiplier) / 100
+              )} */}
+
+
+              {new Intl.NumberFormat('en-gb',{
+                style: 'currency',
+                currency: 'GBP',
+              }).format(
+
+                (travelTimeInformation?.duration.value * SURGE_CHARGE_RATE * multiplier) / 100
+
               )}
 
 
